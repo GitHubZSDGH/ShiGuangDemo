@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#6b6d6e"
+        android:layout_height="40dp">
+        <TextView
+            android:id="@+id/Home_fg_title_city"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="北京"
+            android:layout_marginLeft="20dp"
+            android:textColor="#ffffff"
+            android:drawableRight="@drawable/rate_down"
+            android:gravity="center"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/lead_bg_logo"
+            android:layout_centerInParent="true"/>
+
+
+        <ImageView
+            android:id="@+id/Home_fg_title_SaoYiSao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mall_home_scan"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="15dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/title_search_icon"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/Home_fg_title_SaoYiSao"
+            android:id="@+id/Home_fg_title_Search"
+            android:layout_marginRight="15dp"/>
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+    </FrameLayout>
+
+</LinearLayout>
