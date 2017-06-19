@@ -15,7 +15,7 @@ import test.jiyun.com.shiguangdemo.base.BaseFragment;
 
 /**
  * 项目名称:时光网
- * 类描述: 首页标题和轮播图、容器
+ * 类描述: 首页标题和轮播图、、容器
  * 创建人:LENOVO
  * 创建时间:2017-6-19 20:43
  * 修改人:
