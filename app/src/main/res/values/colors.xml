@@ -3,4 +3,12 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="colorbai">#ffffff</color>
+    <color name="colorback">#616060</color>
+
+    <color name="colorhui">#9e9595</color>
+    <color name="colorhuiback">#3e3f40</color>
+
+
 </resources>

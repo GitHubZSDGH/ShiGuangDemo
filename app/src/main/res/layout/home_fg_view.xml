@@ -22,7 +22,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/lead_bg_logo"
+            android:src="@drawable/icon_mtime"
             android:layout_centerInParent="true"/>
 
 
