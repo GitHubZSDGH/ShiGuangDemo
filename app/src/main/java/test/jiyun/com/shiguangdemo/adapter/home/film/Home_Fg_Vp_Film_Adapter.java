@@ -52,7 +52,7 @@ public class Home_Fg_Vp_Film_Adapter extends BaseAdapter<FilmBean> {
         Glide.with(context)
                 .load(filmBean.getUserImage())
                 .asBitmap()
-                .placeholder(R.drawable.ic_tab_my01)//设置默认图片
+                .placeholder(R.drawable.ic_tab_my01)// 设置默认图片
                 .centerCrop()
                 .into(new BitmapImageViewTarget(userimage) {
                     @Override
