@@ -1,4 +1,4 @@
-package test.jiyun.com.shiguangdemo.fragment.home;
+package test.jiyun.com.shiguangdemo.fragment.ticket;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

@@ -35,6 +35,9 @@ public abstract class BaseFragment extends Fragment {
         initView(view);
         //实现组件监听
         initListener();
+
+        initloadData();
+
     }
 
     @Override

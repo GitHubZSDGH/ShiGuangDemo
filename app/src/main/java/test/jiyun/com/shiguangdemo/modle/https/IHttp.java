@@ -12,4 +12,6 @@ public interface IHttp {
 
     void Post(String url, Map<String, String> map, MyCallback callback);
     void Filed(String url, String fileName, File file, Map<String, String> map, MyCallback myCallback);
+
+    void wGet(String url,MyCallback callback);
 }

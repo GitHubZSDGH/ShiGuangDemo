@@ -88,6 +88,11 @@ private SharedPreferences sharedPreferences;
 
     }
 
+    @Override
+    public void wGet(String url, MyCallback callback) {
+
+    }
+
 
     /**
      * get 请求

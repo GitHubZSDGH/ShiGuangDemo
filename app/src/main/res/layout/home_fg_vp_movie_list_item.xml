@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/Home_fg_Vp_movie_Item_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time Out评选100部最佳恐怖片" />
+
+        <TextView
+            android:id="@+id/Home_fg_Vp_movie_item_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/ic_livesdk_section_selected"
+            android:text="100部  " />
+
+    </RelativeLayout>
+
+    <com.androidkun.PullToRefreshRecyclerView
+        android:id="@+id/Home_fg_vp_movie_item_RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+    </com.androidkun.PullToRefreshRecyclerView>
+
+</LinearLayout>

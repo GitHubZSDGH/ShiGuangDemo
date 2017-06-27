@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/Home_fg_Vp_Film_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="呵呵呵呵"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:background="#d8d9da" />
+
+    <TextView
+        android:id="@+id/Home_fg_Vp_Film_Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:padding="10dp"
+        android:text="hehhehheheh"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#e4e5e6">
+
+        <ImageView
+            android:id="@+id/Home_fg_Vp_Film_image"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Home_fg_vp_Film_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="呵呵呵" />
+
+            <TextView
+                android:id="@+id/Home_fg_vp_Film_english"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="呵呵呵呵呵"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/ic_launcher_round"
+                android:id="@+id/Home_fg_Vp_Film_authorImage"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:id="@+id/Home_fg_Vp_Film_authorName"
+                android:layout_marginLeft="8dp"
+                android:text="呵呵呵"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="评8.0"
+                android:gravity="center"
+                android:id="@+id/Home_fg_Vp_Film_score"
+                android:layout_marginLeft="8dp"
+                android:textColor="#6aa760"/>
+
+            <TextView
+                android:id="@+id/Home_fg_Vp_Film_Conmment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="  10"
+                android:drawableLeft="@drawable/icon_article_comment_small"
+                android:gravity="center"
+                android:layout_marginLeft="8dp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/Home_fg_Vp_Film_sandian"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:src="@drawable/icon_menu_officical_accounts_item"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d2d2d2"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>

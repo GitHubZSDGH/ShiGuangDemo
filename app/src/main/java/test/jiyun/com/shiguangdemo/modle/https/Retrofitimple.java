@@ -105,4 +105,12 @@ public class Retrofitimple implements IHttp {
 
         inithead(myCallback, call);
     }
+
+    @Override
+    public void wGet(String url, MyCallback callback) {
+        Call<ResponseBody> call = iRetrofit.wGet(sharedPreferences.getString("cookie", ""), url);
+        inithead(callback, call);
+    }
+
+
 }

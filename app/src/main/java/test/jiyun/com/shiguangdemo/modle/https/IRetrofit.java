@@ -30,4 +30,8 @@ public interface IRetrofit {
     @Multipart
     @POST
     Call<ResponseBody> Feild(@Nullable @Header("Cookie") String cookie, @Url String url, @QueryMap Map<String, String> map, @Nullable @Part MultipartBody.Part file);
+
+    @GET
+    Call<ResponseBody> wGet(@Nullable @Header("Cookie") String cookie,@Url String url);
+
 }

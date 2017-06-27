@@ -1,4 +1,4 @@
-package test.jiyun.com.shiguangdemo.fragment.home;
+package test.jiyun.com.shiguangdemo.fragment.mall;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -19,7 +19,7 @@ import test.jiyun.com.shiguangdemo.utils.ObservableScrollView;
 
 /**
  * 项目名称:时光网
- * 类描述:
+ * 类描述:商城模块 二层布局
  * 创建人:LENOVO
  * 创建时间:2017-6-20 20:56
  * 修改人:

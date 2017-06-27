@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="正在售票" />
+
+        <TextView
+            android:id="@+id/Home_fg_Vp_ticket_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@drawable/ic_livesdk_section_selected"
+            android:text="更多 " />
+
+    </RelativeLayout>
+
+    <com.androidkun.PullToRefreshRecyclerView
+        android:id="@+id/Home_fg_Vp_ticket_RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+    </com.androidkun.PullToRefreshRecyclerView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#b2b2b3"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="精彩直播" />
+
+            <TextView
+                android:id="@+id/Home_fg_Vp_live_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:drawableRight="@drawable/ic_livesdk_section_selected"
+                android:text="全部 " />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/Home_fg_Vp_live_imag"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher_round"
+            />
+
+        <TextView
+            android:id="@+id/Home_fg_Vp_live_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="《变形金刚5：最后的骑士》" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#b2b2b3" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="正版商城" />
+
+        <TextView
+            android:id="@+id/Home_fg_Vp_mall_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/ic_livesdk_section_selected"
+            android:text="更多" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/Home_fg_Vp_mall_imageDa"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/Home_fg_Vp_mall_imageXiaoShang"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <ImageView
+                android:id="@+id/Home_fg_Vp_mall_imageXiaoXia"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher_round" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="#b2b2b3" />
+
+    <!--<com.androidkun.PullToRefreshRecyclerView
+        android:id="@+id/Home_fg_Vp_RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+    </com.androidkun.PullToRefreshRecyclerView>-->
+
+</LinearLayout>
