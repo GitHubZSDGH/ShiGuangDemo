@@ -37,10 +37,6 @@ public class Home_Fg_Vp_Film_Adapter extends BaseAdapter<FilmBean> {
     @Override
     public void convert(ViewHolder holder, FilmBean filmBean) {
 
-
-//        for (FilmBean bean : filmBean) {
-
-
         holder.setText(R.id.Home_fg_Vp_Film_title, filmBean.getTitle());
         holder.setText(R.id.Home_fg_Vp_Film_Body, filmBean.getSummary());
         ImageView image = holder.getView(R.id.Home_fg_Vp_Film_image);
@@ -63,13 +59,10 @@ public class Home_Fg_Vp_Film_Adapter extends BaseAdapter<FilmBean> {
                     }
                 });
 
-//            Glide.with(context).load(filmBean.getUserImage()).into(userimage);
         holder.setText(R.id.Home_fg_Vp_Film_authorName, filmBean.getNickname());
         holder.setText(R.id.Home_fg_Vp_Film_score, "评" + filmBean.getRating() + "分");
         holder.setText(R.id.Home_fg_Vp_Film_Conmment, String.valueOf("  " + filmBean.getCommentCount()));
 
-
-//        }
         //右下角的三个点的监听
         holder.setOnclickListener(R.id.Home_fg_Vp_Film_sandian, new View.OnClickListener() {
             @Override

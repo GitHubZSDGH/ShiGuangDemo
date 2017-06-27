@@ -103,17 +103,11 @@ public class Home_Fg_Vp_Film extends BaseFragment {
                 Gson gson = new Gson();
                 List<FilmBean> filmBean = gson.fromJson(body, new TypeToken<List<FilmBean>>() {}.getType());
 
-//                for (int i = 0; i < filmBean.size(); i++) {
                     for (FilmBean bean : filmBean) {
 
                         filmBeenList.add(bean);
 
                     }
-
-//                }
-
-
-
 
                 adapter.notifyDataSetChanged();
             }
