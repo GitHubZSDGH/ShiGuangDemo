@@ -1,6 +1,8 @@
 package test.jiyun.com.shiguangdemo.fragment.ticket;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +13,10 @@ import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import test.jiyun.com.shiguangdemo.App;
 import test.jiyun.com.shiguangdemo.R;
 import test.jiyun.com.shiguangdemo.base.BaseFragment;
+import test.jiyun.com.shiguangdemo.fragment.home.Home_Fg_Tab_View;
 
 /**
  * 项目名称:时光网
@@ -36,6 +40,7 @@ public class Ticket_Fg_View extends BaseFragment {
     FrameLayout TicketFgTitleViewPager;
 
     private boolean boo = true;
+    private FragmentManager manager;
 
     @Override
     protected int getLayoutViwe() {
@@ -46,6 +51,12 @@ public class Ticket_Fg_View extends BaseFragment {
     protected void initView(View view) {
 
         initcolor(TicketFgTitleFilm);
+
+        manager = App.baseActivity.getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(R.id.Home_fg_framerLayout,new MoviesFragment());
+        transaction.addToBackStack(null);
+        transaction.commit();
 
     }
 
@@ -72,15 +83,24 @@ public class Ticket_Fg_View extends BaseFragment {
                     boo = true;
                 }
 
+                manager = App.baseActivity.getSupportFragmentManager();
+                FragmentTransaction transaction = manager.beginTransaction();
+                transaction.replace(R.id.Ticket_fg_title_ViewPager,new MoviesFragment());
+                transaction.addToBackStack(null);
+                transaction.commit();
 
                 break;
             case R.id.Ticket_fg_title_cinema:// 影视
                 if (boo){
-
                     initcolor(TicketFgTitleCinema);
                     initcolorhui(TicketFgTitleFilm);
                     boo = false;
                 }
+
+//                manager = App.baseActivity.getSupportFragmentManager();
+//                FragmentTransaction transaction = manager.beginTransaction();
+//                transaction.replace(R.id.Ticket_fg_title_ViewPager,new MoviesFragment());
+//                transaction.commit();
 
                 break;
             case R.id.Ticket_fg_title_Search:// 搜索

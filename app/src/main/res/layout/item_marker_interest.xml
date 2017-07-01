@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/item_interest_img"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y300"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/item_interest_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x10"
+        android:ellipsize="end"
+        android:lines="2"
+        android:maxLines="2"
+        android:text="工笔艺术炫彩帽"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥"
+            android:textColor="@color/orange" />
+
+        <TextView
+            android:id="@+id/item_interest_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxEms="10"
+            android:text="25"
+            android:textColor="@color/orange" />
+    </LinearLayout>
+</LinearLayout>

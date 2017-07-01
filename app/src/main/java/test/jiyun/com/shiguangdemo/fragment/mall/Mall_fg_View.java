@@ -1,17 +1,14 @@
 package test.jiyun.com.shiguangdemo.fragment.mall;
 
 import android.graphics.Color;
-import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import test.jiyun.com.shiguangdemo.R;
 import test.jiyun.com.shiguangdemo.base.BaseFragment;
@@ -45,6 +42,8 @@ public class Mall_fg_View extends BaseFragment implements ObservableScrollView.S
 
     private int imageHeight;
 
+    private FragmentManager manager;
+
 
     @Override
     protected int getLayoutViwe() {
@@ -54,6 +53,11 @@ public class Mall_fg_View extends BaseFragment implements ObservableScrollView.S
     @Override
     protected void initView(View view) {
         MallFgTitleSearch.setKeyListener(null);
+
+//        manager = App.baseActivity.getSupportFragmentManager();
+//        FragmentTransaction transaction = manager.beginTransaction();
+//        transaction.add(R.id.Home_fg_framerLayout,new Home_Fg_Tab_View());
+//        transaction.commit();
 
     }
 

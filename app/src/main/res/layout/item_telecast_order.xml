@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ImageView
+    android:id="@+id/item_order_img"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y400"
+    android:src="@drawable/img_default_300x200"
+    android:scaleType="fitXY"
+    />
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/item_order_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="西游记女儿国麦迈"
+        android:maxLines="1"
+        android:ellipsize="end"
+
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        />
+<LinearLayout
+    android:layout_marginTop="@dimen/y20"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <TextView
+        android:id="@+id/item_order_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="06月18日22:00直播"
+        android:textColor="@color/orange"
+        android:maxLines="1"
+        android:ellipsize="end"
+        />
+    <TextView
+        android:id="@+id/item_order_people"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6,0213预约"
+        android:maxLines="1"
+        android:ellipsize="end"
+        />
+
+    <Button
+        android:id="@+id/item_order_btn"
+        android:layout_marginLeft="@dimen/x220"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y60"
+        android:text="预约"
+        android:textColor="@color/orange"
+        android:background="@drawable/mall_address_add_btn"
+        />
+</LinearLayout>
+
+</LinearLayout>

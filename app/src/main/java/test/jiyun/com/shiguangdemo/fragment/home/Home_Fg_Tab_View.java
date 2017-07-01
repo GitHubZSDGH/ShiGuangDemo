@@ -68,6 +68,7 @@ public class Home_Fg_Tab_View extends BaseFragment implements MyScrollView.OnScr
 
     };
 
+
     // 悬停的
     private Handler mHandler = new Handler() {
 
@@ -106,11 +107,11 @@ public class Home_Fg_Tab_View extends BaseFragment implements MyScrollView.OnScr
         fragList.add(new Home_Fg_Vp_View());
         fragList.add(new Info_Fg_View());
         fragList.add(new Movie_Fg_Vp_View());
-//        fragList.add(new Home_Fg_Vp_Prevue());
+        fragList.add(new Home_Fg_Vp_Prevue());
         fragList.add(new Home_Fg_Vp_Film());
 
         //滑动的TabLayout；
-//        HomeFgTabLayout.setTabMode(TabLayout.MODE_FIXED);//tablayout滑动效果；
+//        HomeFgTabLayout. setTabMode(TabLayout.MODE_FIXED);//tablayout滑动效果；
         mAdapter = new HomePagmentAdapter(getFragmentManager(), fragList, getContext());
         HomeFgViewPager.setAdapter(mAdapter);
         HomeFgTabLayout.setupWithViewPager(HomeFgViewPager);
@@ -141,7 +142,6 @@ public class Home_Fg_Tab_View extends BaseFragment implements MyScrollView.OnScr
 //        initBundle() {
 //
 //        }
-
 
     }
 
@@ -174,15 +174,22 @@ public class Home_Fg_Tab_View extends BaseFragment implements MyScrollView.OnScr
 
 
 
+
     //轮播图适配器
     private class TestLoopAdapter extends LoopPagerAdapter {
 
+
+
         private int[] imgs = {
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
+                R.drawable.get01,
+                R.drawable.get02,
+                R.drawable.get03,
+                R.drawable.get04,
+                R.drawable.get05,
+                R.drawable.get06,
+                R.drawable.get07,
+                R.drawable.get08,
+                R.drawable.get09,
         };
 
         public TestLoopAdapter(RollPagerView viewPager) {

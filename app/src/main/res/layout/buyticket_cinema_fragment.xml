@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RadioGroup
+        android:id="@+id/rg_cinema_choose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rb_cinema_total"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@android:color/transparent"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="全部"
+            android:textColor="@drawable/buyticket_cinmera_text"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="@dimen/x5"
+            android:layout_height="@dimen/y40"
+            android:layout_gravity="center_vertical"
+            android:background="@color/gray" />
+
+        <RadioButton
+            android:id="@+id/rb_cinema_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@android:color/transparent"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/cinema_price_sort_selector"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="价格"
+            android:textColor="@drawable/buyticket_cinmera_text"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="@dimen/x5"
+            android:layout_height="@dimen/y40"
+            android:layout_gravity="center_vertical"
+            android:background="@color/gray" />
+
+        <RadioButton
+            android:id="@+id/rb_cinema_near"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@android:color/transparent"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="附近"
+            android:textColor="@drawable/buyticket_cinmera_text"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="@dimen/x5"
+            android:layout_height="@dimen/y40"
+            android:layout_gravity="center_vertical"
+            android:background="@color/gray" />
+
+
+        <RadioButton
+            android:id="@+id/rb_cinema_screen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@android:color/transparent"
+            android:drawableLeft="@drawable/selector_cinema_filter_icon"
+            android:drawablePadding="0dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="筛选"
+            android:textColor="@drawable/buyticket_cinmera_text"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <com.youth.banner.Banner
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/buy_cinema_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y200"
+        app:image_scale_type="center_crop"
+        app:indicator_drawable_selected="@drawable/selected_radius"
+        app:indicator_drawable_unselected="@drawable/unselected_radius"
+        app:indicator_height="8dp"
+        app:indicator_width="8dp"
+        app:indicator_margin="6dp"/>
+
+<FrameLayout
+    android:id="@+id/buy_cinema_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+</LinearLayout>

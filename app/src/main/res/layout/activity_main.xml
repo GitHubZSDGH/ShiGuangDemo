@@ -5,6 +5,170 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="test.jiyun.com.shiguangdemo.activity.MainActivity">
+    <RelativeLayout
+        android:id="@+id/Home_fg_tab_Home"
+        android:layout_width="match_parent"
+        android:background="#6b6d6e"
+        android:layout_height="40dp"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/Home_fg_title_city"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="北京"
+            android:layout_marginLeft="20dp"
+            android:textColor="#ffffff"
+            android:drawableRight="@drawable/rate_down"
+            android:gravity="center"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_mtime"
+            android:layout_centerInParent="true"/>
+
+
+        <ImageView
+            android:id="@+id/Home_fg_title_SaoYiSao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mall_home_scan"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="15dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/title_search_icon"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/Home_fg_title_SaoYiSao"
+            android:id="@+id/Home_fg_title_Search"
+            android:layout_marginRight="15dp"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/Home_fg_tab_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#6b6d6e"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/Ticket_fg_title_city"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:drawableRight="@drawable/rate_down"
+            android:gravity="center"
+            android:text="北京"
+            android:textColor="#ffffff" />
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="28dp"
+            android:layout_centerInParent="true"
+            android:background="#3e3f40"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/Ticket_fg_title_film"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="电影"
+                android:textColor="#9e9595" />
+
+            <TextView
+                android:id="@+id/Ticket_fg_title_cinema"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="影院"
+                android:textColor="#9e9595" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/Ticket_fg_title_Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/title_search_icon" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/Home_fg_tab_mall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorhui"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/Mall_fg_Title_SaoYiSao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/mall_home_scan" />
+
+        <EditText
+            android:id="@+id/Mall_fg_Title_Search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/mall_titile_search"
+            android:drawableLeft="@drawable/title_search_icon"
+            android:focusable="false"
+            android:hint="搜索正版电影周边" />
+
+        <ImageView
+            android:id="@+id/Mall_fg_Title_Cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/mall_ic_cart" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/Home_fg_tab_live"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#6b6d6e"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="直播"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+
+
 
     <FrameLayout
         android:id="@+id/Main_FrameLayout"

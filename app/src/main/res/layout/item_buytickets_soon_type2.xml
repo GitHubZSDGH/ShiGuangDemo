@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<TextView
+    android:layout_marginLeft="20dp"
+    android:id="@+id/item_soon_date"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="6月20日"
+    />
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="6"
+        android:orientation="horizontal"
+        >
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/item_soon_img"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:background="@drawable/horrorfilm_cover"
+            android:scaleType="fitXY"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/img_play"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/item_soon_img_play" />
+       </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:weightSum="3"
+            >
+            <TextView
+                android:id="@+id/item_soon_title"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="雄狮"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:id="@+id/item_soon_wantedCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="313人想看"
+                    android:textColor="@color/orange"
+                    />
+                <TextView
+                    android:id="@+id/item_soon_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="家庭/剧情"
+                    android:maxEms="8"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/item_soon_actors"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="作者"
+                />
+        </LinearLayout>
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/item_soon_presell"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="预售"
+            android:background="@drawable/home_button_movie2"
+            android:layout_marginTop="42dp"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.37dp"
+        android:background="@android:color/darker_gray"
+        />
+
+</LinearLayout>

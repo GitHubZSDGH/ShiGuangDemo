@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="6"
+    >
+        <TextView
+            android:id="@+id/item_cinmera_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="中关村美嘉"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            />
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    >
+   <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="￥"
+    android:textColor="@color/orange"
+    android:textSize="15sp"
+    />
+    <TextView
+        android:id="@+id/item_cinmera_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="49"
+        android:textColor="@color/orange"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="起"
+        android:textColor="@color/orange"
+        android:textSize="15sp"
+        />
+</LinearLayout>
+</LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <TextView
+        android:id="@+id/item_cinmera_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="海淀区中关村广场购物中心津乐汇"
+        android:maxEms="13"
+        android:lines="1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=">20km"
+        />
+</LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <ImageView
+        android:id="@+id/item_cinmera_parking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_small_parking"
+        />
+
+</LinearLayout>
+</LinearLayout>

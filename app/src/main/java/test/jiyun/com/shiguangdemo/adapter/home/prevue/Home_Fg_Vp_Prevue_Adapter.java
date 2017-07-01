@@ -15,7 +15,7 @@ import test.jiyun.com.shiguangdemo.modle.bean.prevue.PrevueBean;
 
 /**
  * 项目名称:时光网
- * 类描述:
+ * 类描述: 预告片 的适配器
  * 创建人:LENOVO
  * 创建时间:2017-6-26 20:20
  * 修改人:

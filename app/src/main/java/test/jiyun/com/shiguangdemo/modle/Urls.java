@@ -36,5 +36,45 @@ public class Urls {
     //影评
     public static final String FILM = "https://api-m.mtime.cn/MobileMovie/Review.api";
 
+/**----------------------------------------------------------------------------------------------*/
+
+    public static final String BASEURlTICKET = "https://ticket-api-m.mtime.cn/";
+
+    //      2. 电影 -- 即将上映
+    public static final String COMINGSOON = BASEURlTICKET + "movie/mobilemoviecoming.api";
+
+    public static final String BASEURl = "https://api-m.mtime.cn/";
+    //正在热映
+    public static final String SHOPPINGNOW = BASEURl + "PageSubArea/HotPlayMovies.api";
+    //选择城市
+    public static final String CITY = BASEURl + "Showtime/HotCitiesByCinema.api";
+    //    购票
+    //      1.电影 --  正在热映
+    public static final String NOWISHIT = BASEURl + "Showtime/LocationMovies.api";
+    //      3.影院 -- 全部
+    public static final String CinmeraALL = BASEURl + "OnlineLocationCinema/OnlineCinemasByCity.api";
+    //             2. 商城 你可能感兴趣的
+    public static final String INTERESTED = BASEURl + "ECommerce/RecommendProducts.api";
+    //             4.商城 --- 购物车 -- 为空时
+    public static final String SHOPPINGCARNULL = BASEURl + "ECommerce/RecommendProducts.api";
+
+
+    //    商城
+    //             1.  上半部分
+    public static final String HALFPART = "https://mall-api-m.mtime.cn/mall/index.api";
+
+
+    //    直播
+    //       1. 重磅预约
+    public static final String BLOCKBUSTER = "https://live-api-m.mtime.cn/live_room/getLiveList";
+    //       2.精彩回放
+    public static final String REVIEWS = "https://live-api-m.mtime.cn/live_room/getWonderVodList";
+
+
+
+
+
+
+
 
 }

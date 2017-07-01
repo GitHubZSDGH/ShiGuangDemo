@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/top_list_rv_img"
+        android:layout_width="@dimen/x150"
+        android:layout_height="@dimen/y150"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_default_45x45"
+        />
+    <TextView
+        android:layout_marginTop="@dimen/y10"
+        android:id="@+id/top_list_rv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="变形金刚5帽"
+        android:maxEms="5"
+        android:lines="1"
+        android:ellipsize="end"
+        />
+    <TextView
+        android:layout_marginTop="@dimen/y10"
+        android:id="@+id/top_list_rv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="69"
+        android:textColor="@color/orange"
+        />
+
+</LinearLayout>

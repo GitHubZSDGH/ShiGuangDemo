@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.youth.banner.Banner
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/frag_marker_banner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y350"
+                app:image_scale_type="center_crop"
+                app:indicator_drawable_selected="@drawable/selected_radius"
+                app:indicator_drawable_unselected="@drawable/unselected_radius"
+                app:indicator_height="8dp"
+                app:indicator_width="8dp"
+                app:indicator_margin="6dp"/>
+
+           <com.androidkun.PullToRefreshRecyclerView
+               android:id="@+id/frag_marker_dieplay_pullRV"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/y10"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y500"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y300"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    >
+                <ImageView
+                    android:id="@+id/marker_img4_left"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/y300"
+                    android:layout_weight="1"
+                    android:src="@drawable/img_default_90x90"
+                    android:scaleType="fitXY"
+                    />
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/y300"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    >
+                    <ImageView
+                        android:id="@+id/marker_img4_right_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/img_default_90x90"
+                        android:scaleType="fitXY"
+                        />
+                    <ImageView
+                        android:id="@+id/marker_img4_right_down"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/img_default_90x90"
+                        android:scaleType="fitXY"
+                        />
+                </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/marker_img4_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y200"
+                    android:src="@drawable/img_default_300x200"
+                    android:scaleType="fitXY"
+                    />
+            </LinearLayout>
+
+            <com.androidkun.PullToRefreshRecyclerView
+                android:id="@+id/frag_marker_two_pullRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/frag_marker_bgimg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y350"
+                    android:src="@drawable/img_default_300x200"
+                    android:scaleType="fitXY"
+                    />
+
+                <TextView
+                    android:text="CaptainAmerica"
+                    android:layout_marginTop="@dimen/y260"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/frag_marker_cyclo_titleEn" />
+
+                <TextView
+                    android:text="美国队长系列"
+                    android:layout_marginTop="@dimen/y300"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="16sp"
+                    android:id="@+id/frag_marker_cyclo_titleCn" />
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:id="@+id/frag_marker_cyclo_img1"
+                android:layout_width="@dimen/x200"
+                android:layout_height="@dimen/x200"
+                android:padding="5dp"
+                />
+            <ImageView
+                android:id="@+id/frag_marker_cyclo_img2"
+                android:layout_width="@dimen/x200"
+                android:layout_height="@dimen/x200"
+                android:padding="5dp"
+
+                />
+            <ImageView
+                android:id="@+id/frag_marker_cyclo_img3"
+                android:layout_width="@dimen/x200"
+                android:layout_height="@dimen/x200"
+                android:padding="5dp"
+
+                />
+            <ImageView
+                android:id="@+id/frag_marker_cyclo_img4"
+                android:layout_width="@dimen/x200"
+                android:layout_height="@dimen/x200"
+                android:padding="5dp"
+
+                />
+            <ImageView
+                android:id="@+id/frag_marker_cyclo_img5"
+                android:layout_width="@dimen/x200"
+                android:layout_height="@dimen/x200"
+                android:padding="5dp"
+                />
+        </LinearLayout>
+    </HorizontalScrollView>
+            </RelativeLayout>
+
+            <com.androidkun.PullToRefreshRecyclerView
+                android:id="@+id/frag_marker_cyclo_pullRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.androidkun.PullToRefreshRecyclerView
+                android:id="@+id/frag_marker_static_pullRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="20dp"
+                >
+                <View
+                    android:background="@android:color/darker_gray"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/y2"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/darker_gray"
+                    android:drawablePadding="5dp"
+                    android:drawableLeft="@drawable/home_recommended_daily_icon"
+                    android:text="你可能感兴趣的"/>
+                <View
+                    android:background="@android:color/darker_gray"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/y2" />
+            </LinearLayout>
+
+            <com.androidkun.PullToRefreshRecyclerView
+                android:id="@+id/frag_marker_interest_pullRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

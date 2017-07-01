@@ -4,11 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.androidkun.PullToRefreshRecyclerView
+    <test.jiyun.com.shiguangdemo.view.PtrRecycleView
         android:id="@+id/Home_fg_Vp_RecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </com.androidkun.PullToRefreshRecyclerView>
+    </test.jiyun.com.shiguangdemo.view.PtrRecycleView>
 
 </LinearLayout>

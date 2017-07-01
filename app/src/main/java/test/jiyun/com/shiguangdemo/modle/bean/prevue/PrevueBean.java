@@ -68,6 +68,13 @@ public class PrevueBean {
     }
 
     public static class DataBean {
+        @Override
+        public String toString() {
+            return "DataBean{" +
+                    "trailers=" + trailers +
+                    '}';
+        }
+
         private List<TrailersBean> trailers;
 
         public List<TrailersBean> getTrailers() {
@@ -115,7 +122,7 @@ public class PrevueBean {
             private int id;
             private int movieId;
             private String movieName;
-            private int rating;
+            private double rating;
             private String summary;
             private String url;
             private int videoLength;
@@ -162,11 +169,11 @@ public class PrevueBean {
                 this.movieName = movieName;
             }
 
-            public int getRating() {
+            public double getRating() {
                 return rating;
             }
 
-            public void setRating(int rating) {
+            public void setRating(double rating) {
                 this.rating = rating;
             }
 

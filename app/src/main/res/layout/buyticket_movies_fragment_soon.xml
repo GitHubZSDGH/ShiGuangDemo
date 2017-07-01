@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:id="@+id/buyicket_movies_soon_scroolview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/buyicket_movies_soon_rg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/attention"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/buyticket_movie_soon_selector"
+                            android:button="@null"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:text="最受关注"
+                            android:textColor="@drawable/buyticket_movie_soon_text_selector"
+                            android:textSize="20sp" />
+
+
+                        <RadioButton
+                            android:id="@+id/seven"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/buyticket_movie_soon_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="七月大片"
+                            android:textColor="@drawable/buyticket_movie_soon_text_selector"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/eight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/buyticket_movie_soon_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="八月大片"
+                            android:textColor="@drawable/buyticket_movie_soon_text_selector"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/nine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/buyticket_movie_soon_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="九月大片"
+                            android:textColor="@drawable/buyticket_movie_soon_text_selector"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/hopeful"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/buyticket_movie_soon_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="有望引进"
+                            android:textColor="@drawable/buyticket_movie_soon_text_selector"
+                            android:textSize="20sp" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <FrameLayout
+                android:id="@+id/soon_frame"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+            </FrameLayout>
+
+            <com.jude.rollviewpager.RollPagerView
+                android:id="@+id/soon_pollpv"
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+            </com.jude.rollviewpager.RollPagerView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/soon_recyclerview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
