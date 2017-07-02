@@ -224,7 +224,7 @@ public class MainActivity extends BaseActivity {
                 "MoviesFragment".equals(simpleName) ||
                 "MarkerFragment".equals(simpleName) ||
                 "Live_Fg_View".equals(simpleName) ||
-                "Live_Fg_View".equals(simpleName)) {
+                "My_Fg_view".equals(simpleName)) {
 
             finish();
         } else {
