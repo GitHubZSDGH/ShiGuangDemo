@@ -1,5 +1,7 @@
 package test.jiyun.com.shiguangdemo.activity;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.widget.EditText;
@@ -81,6 +83,10 @@ public class MainActivity extends BaseActivity {
     private FragmentManager fragmentManager = getSupportFragmentManager();
     private boolean boo = true;
 
+    private SharedPreferences share ;
+    private String cityname;
+
+
     @Override
     protected int getLayoutViwe() {
         return R.layout.activity_main;
@@ -88,7 +94,16 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+        share = App.baseActivity.getSharedPreferences("city",MODE_PRIVATE);
+        cityname = share.getString("cityname", "北京");
 
+
+    }
+
+    @Override
+    protected void onResume() {
+        HomeFgTitleCity.setText(cityname);
+        super.onResume();
     }
 
     @Override
@@ -97,15 +112,13 @@ public class MainActivity extends BaseActivity {
         HomeFgTabHome.setVisibility(View.VISIBLE);
         FragmentBuilder.getInstance().start(Home_Fg_Tab_View.class, R.id.Main_FrameLayout).builder();
         initcolor(TicketFgTitleFilm);
+        HomeFgTitleCity.setText(cityname);
     }
 
     @Override
     protected void initListener() {
 
     }
-
-
-
 
 
     @OnClick({R.id.home_Rbt, R.id.ticket_Rbt, R.id.mall_Rbt1, R.id.live_Rbt, R.id.mine_Rbt,
@@ -117,6 +130,7 @@ public class MainActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.home_Rbt: //首页
+                HomeFgTitleCity.setText(cityname);
                 HomeFgTabHome.setVisibility(View.VISIBLE);
                 HomeFgTabTicket.setVisibility(View.GONE);
                 HomeFgTabMall.setVisibility(View.GONE);
@@ -126,6 +140,7 @@ public class MainActivity extends BaseActivity {
                 break;
 
             case R.id.ticket_Rbt://购票
+                HomeFgTitleCity.setText(cityname);
                 HomeFgTabHome.setVisibility(View.GONE);
                 HomeFgTabTicket.setVisibility(View.VISIBLE);
                 HomeFgTabMall.setVisibility(View.GONE);
@@ -163,14 +178,19 @@ public class MainActivity extends BaseActivity {
 
             //首页页面的title监听
             case R.id.Home_fg_title_city:// 选择城市
+                startActivity(new Intent(MainActivity.this,CityActivity.class));
+
                 break;
             case R.id.Home_fg_title_SaoYiSao:// 扫一扫
+                startActivity(new Intent(MainActivity.this,Sao1SaoActivity.class));
                 break;
             case R.id.Home_fg_title_Search:// 搜索
+
                 break;
 
             //购票页面的title监听
             case R.id.Ticket_fg_title_city:// 选择城市
+                startActivity(new Intent(MainActivity.this,CityActivity.class));
                 break;
 
             case R.id.Ticket_fg_title_film:// 电影
@@ -203,10 +223,12 @@ public class MainActivity extends BaseActivity {
                 break;
             // 商城页面title监听
             case R.id.Mall_fg_Title_SaoYiSao:
+                startActivity(new Intent(MainActivity.this,Sao1SaoActivity.class));
                 break;
             case R.id.Mall_fg_Title_Search:
                 break;
             case R.id.Mall_fg_Title_Cart:
+
                 break;
 
         }

@@ -1,6 +1,7 @@
 package test.jiyun.com.shiguangdemo.fragment.mall;
 
 
+import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 
 import com.androidkun.PullToRefreshRecyclerView;
 import com.bumptech.glide.Glide;
+
 import com.google.gson.Gson;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -77,6 +79,7 @@ public class MarkerFragment extends BaseFragment implements View.OnClickListener
     private List<MarkerTopBean.DataBean.MallBean.TopicBean.SubListBeanX> subList4;
 
 
+    private List<String> topictitle = new ArrayList<>();
 
 
     @Override
@@ -145,8 +148,8 @@ public class MarkerFragment extends BaseFragment implements View.OnClickListener
         //模玩
         frag_marker_dieplay_pullRV.setLayoutManager(new GridLayoutManager(getContext(),4));
         frag_marker_dieplay_pullRV.setHasFixedSize(true);
-        frag_marker_cyclo_pullRV.setPullRefreshEnabled(false);
-        frag_marker_cyclo_pullRV.setLoadingMoreEnabled(false);
+        frag_marker_dieplay_pullRV.setPullRefreshEnabled(false);
+        frag_marker_dieplay_pullRV.setLoadingMoreEnabled(false);
         dieplayAdapter=new DieplayAdapter(getContext(),navigatorlist);
         frag_marker_dieplay_pullRV.setAdapter(dieplayAdapter);
 
@@ -160,23 +163,23 @@ public class MarkerFragment extends BaseFragment implements View.OnClickListener
         //五张圆形图
         frag_marker_cyclo_pullRV.setLayoutManager(new GridLayoutManager(getContext(), 3));
         frag_marker_cyclo_pullRV.setHasFixedSize(true);
-        frag_marker_interest_pullRV.setPullRefreshEnabled(false);
+        frag_marker_cyclo_pullRV.setPullRefreshEnabled(false);
         cycloRVAdapter = new CycloRVAdapter(getContext(), subListBeanXes);
         frag_marker_cyclo_pullRV.setAdapter(cycloRVAdapter);
 
         //一张大图片下面有小图片不可移动
         frag_marker_static_pullRV.setLayoutManager(new LinearLayoutManager(getContext()));
         frag_marker_static_pullRV.setHasFixedSize(true);
-        frag_marker_interest_pullRV.setPullRefreshEnabled(false);
-        frag_marker_interest_pullRV.setLoadingMoreEnabled(false);
+        frag_marker_static_pullRV.setPullRefreshEnabled(false);
+        frag_marker_static_pullRV.setLoadingMoreEnabled(false);
         staticPVAdapter = new StaticPVAdapter(getContext(), categorylist);
         frag_marker_static_pullRV.setAdapter(staticPVAdapter);
 
         //你可能感兴趣的
         frag_marker_interest_pullRV.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         frag_marker_interest_pullRV.setHasFixedSize(true);
-        frag_marker_interest_pullRV.setPullRefreshEnabled(true);
-        frag_marker_interest_pullRV.setLoadingMoreEnabled(true);
+        frag_marker_interest_pullRV.setPullRefreshEnabled(false);
+        frag_marker_interest_pullRV.setLoadingMoreEnabled(false);
         interestPVAdapter = new InterestPVAdapter(getContext(), interestlist);
         frag_marker_interest_pullRV.setAdapter(interestPVAdapter);
 
@@ -208,6 +211,18 @@ public class MarkerFragment extends BaseFragment implements View.OnClickListener
                 subList2 = markerTopBean.getData().getMall().getTopic().get(2).getSubList();
                 subList3 = markerTopBean.getData().getMall().getTopic().get(3).getSubList();
                 subList4 = markerTopBean.getData().getMall().getTopic().get(4).getSubList();
+
+                for (int i = 0; i < markerTopBean.getData().getMall().getTopic().size(); i++) {
+                    List<MarkerTopBean.DataBean.MallBean.TopicBean>  topic1 = markerTopBean.getData().getMall().getTopic();
+                    MarkerTopBean.DataBean.MallBean.TopicBean topicBean = topic1.get(i);
+                    String titleCn = topicBean.getTitleCn();
+                    String titleEn = topicBean.getTitleEn();
+                    topictitle.add(titleCn);
+                    topictitle.add(titleEn);
+
+                }
+
+
                 //四张图片
                 cellA = markerTopBean.getData().getMall().getCellA();
                 cellB = markerTopBean.getData().getMall().getCellB();
@@ -289,6 +304,9 @@ public class MarkerFragment extends BaseFragment implements View.OnClickListener
             case R.id.frag_marker_cyclo_img1:
                 subListBeanXes.clear();
                 Toast.makeText(getActivity(), "点击了图片", Toast.LENGTH_SHORT).show();
+
+                frag_marker_cyclo_titleCn.setText(topictitle.get(0));
+                frag_marker_cyclo_titleEn.setText(topictitle.get(1));
                 subListBeanXes.addAll(subList);
                 cycloRVAdapter.notifyDataSetChanged();
                 Glide.with(getContext()).load(topic.get(0).getBackgroupImage()).into(frag_marker_bgimg);
@@ -296,6 +314,8 @@ public class MarkerFragment extends BaseFragment implements View.OnClickListener
             case R.id.frag_marker_cyclo_img2:
                 subListBeanXes.clear();
                 Toast.makeText(getActivity(), "点击了图片", Toast.LENGTH_SHORT).show();
+                frag_marker_cyclo_titleCn.setText(topictitle.get(2));
+                frag_marker_cyclo_titleEn.setText(topictitle.get(3));
                 subListBeanXes.addAll(subList1);
                 cycloRVAdapter.notifyDataSetChanged();
                 Glide.with(getContext()).load(topic.get(1).getBackgroupImage()).into(frag_marker_bgimg);
@@ -303,6 +323,8 @@ public class MarkerFragment extends BaseFragment implements View.OnClickListener
             case R.id.frag_marker_cyclo_img3:
                 subListBeanXes.clear();
                 Toast.makeText(getActivity(), "点击了图片", Toast.LENGTH_SHORT).show();
+                frag_marker_cyclo_titleCn.setText(topictitle.get(4));
+                frag_marker_cyclo_titleEn.setText(topictitle.get(5));
                 subListBeanXes.addAll(subList2);
                 cycloRVAdapter.notifyDataSetChanged();
                 Glide.with(getContext()).load(topic.get(2).getBackgroupImage()).into(frag_marker_bgimg);
@@ -310,6 +332,8 @@ public class MarkerFragment extends BaseFragment implements View.OnClickListener
             case R.id.frag_marker_cyclo_img4:
                 subListBeanXes.clear();
                 Toast.makeText(getActivity(), "点击了图片", Toast.LENGTH_SHORT).show();
+                frag_marker_cyclo_titleCn.setText(topictitle.get(6));
+                frag_marker_cyclo_titleEn.setText(topictitle.get(7));
                 subListBeanXes.addAll(subList3);
                 cycloRVAdapter.notifyDataSetChanged();
                 Glide.with(getContext()).load(topic.get(3).getBackgroupImage()).into(frag_marker_bgimg);
@@ -317,6 +341,8 @@ public class MarkerFragment extends BaseFragment implements View.OnClickListener
             case R.id.frag_marker_cyclo_img5:
                 subListBeanXes.clear();
                 Toast.makeText(getActivity(), "点击了图片", Toast.LENGTH_SHORT).show();
+                frag_marker_cyclo_titleCn.setText(topictitle.get(8));
+                frag_marker_cyclo_titleEn.setText(topictitle.get(9));
                 subListBeanXes.addAll(subList4);
                 cycloRVAdapter.notifyDataSetChanged();
                 Glide.with(getContext()).load(topic.get(4).getBackgroupImage()).into(frag_marker_bgimg);

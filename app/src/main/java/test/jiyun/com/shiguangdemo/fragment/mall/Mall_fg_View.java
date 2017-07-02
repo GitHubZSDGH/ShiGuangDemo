@@ -1,17 +1,24 @@
 package test.jiyun.com.shiguangdemo.fragment.mall;
 
 import android.graphics.Color;
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
+import test.jiyun.com.shiguangdemo.App;
 import test.jiyun.com.shiguangdemo.R;
 import test.jiyun.com.shiguangdemo.base.BaseFragment;
+import test.jiyun.com.shiguangdemo.fragment.home.Home_Fg_Tab_View;
 import test.jiyun.com.shiguangdemo.utils.ObservableScrollView;
 
 /**
