@@ -35,4 +35,7 @@ public interface IHomeModel {
     //影评
     void film(String needTop,MyCallback callback);
 
+    //首页 -- 选择城市
+    void citylist(MyCallback callback);
+
 }

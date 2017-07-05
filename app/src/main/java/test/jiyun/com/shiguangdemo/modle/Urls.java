@@ -12,6 +12,9 @@ package test.jiyun.com.shiguangdemo.modle;
 public class Urls {
 
 
+    //首页 -- 选择城市
+    public static final String CITYLIST = "https://api-m.mtime.cn/Showtime/HotCitiesByCinema.api";
+
     //精选 -- 正在售票
     public static final String TICKET = "https://api-m.mtime.cn/PageSubArea/HotPlayMovies.api";
 

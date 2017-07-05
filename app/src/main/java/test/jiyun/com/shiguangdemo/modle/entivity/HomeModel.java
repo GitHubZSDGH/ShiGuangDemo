@@ -1,5 +1,7 @@
 package test.jiyun.com.shiguangdemo.modle.entivity;
 
+import android.util.Log;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,85 +21,85 @@ import test.jiyun.com.shiguangdemo.modle.https.HttpFactory;
 public class HomeModel implements IHomeModel {
 
     /**
-     * 精选 -- 正在售票
-     *
      * @param locationId
-     * @param callback
+     * @param callback   精选 -- 正在售票
      */
     @Override
     public void ticket(int locationId, MyCallback callback) {
         Map<String, String> tick = new HashMap<>();
         tick.put("locationId", String.valueOf(locationId));
 
-        HttpFactory.getFactory().Get(Urls.TICKET,tick,callback);
+        HttpFactory.getFactory().Get(Urls.TICKET, tick, callback);
+        Log.e("网络请求-----", "call:" + Urls.TICKET+tick);
 
     }
 
     /**
-     *
-     * 精选 -- 精彩直播和正版商城
-     *
-     * @param callback
+     * @param callback 精选 -- 精彩直播和正版商城
      */
     @Override
     public void live(MyCallback callback) {
-        HttpFactory.getFactory().wGet(Urls.LIVE,callback);
+        HttpFactory.getFactory().wGet(Urls.LIVE, callback);
+        Log.e("网络请求-----", "call:" + Urls.LIVE);
     }
 
     /**
-     * 精选 -- 其他内容
-     *
      * @param pageIndex
-     * @param callback
+     * @param callback  精选 -- 其他内容
      */
     @Override
     public void other(int pageIndex, MyCallback callback) {
-        Map<String,String> page = new HashMap<>();
+        Map<String, String> page = new HashMap<>();
         page.put("pageIndex", String.valueOf(pageIndex));
 
-        HttpFactory.getFactory().Get(Urls.OTHER,page,callback);
+        HttpFactory.getFactory().Get(Urls.OTHER, page, callback);
+        Log.e("网络请求-----", "call:" + Urls.TICKET+page);
     }
 
     /**
-     * 选电影 -- 分类标题和每日佳片
-     * @param callback
+     * @param callback 选电影 -- 分类标题和每日佳片
      */
     @Override
     public void movie(MyCallback callback) {
-        HttpFactory.getFactory().wGet(Urls.MOVIE,callback);
+        HttpFactory.getFactory().wGet(Urls.MOVIE, callback);
     }
 
     /**
-     * 选电影 -- 推荐影单
      * @param pageIndex
-     * @param callback
+     * @param callback  选电影 -- 推荐影单
      */
     @Override
     public void movielist(int pageIndex, MyCallback callback) {
-        Map<String,String> mo = new HashMap<>();
+        Map<String, String> mo = new HashMap<>();
         mo.put("pageIndex", String.valueOf(pageIndex));
-        HttpFactory.getFactory().Get(Urls.MOVIELIST,mo,callback);
+        HttpFactory.getFactory().Get(Urls.MOVIELIST, mo, callback);
 
     }
 
     /**
-     * 预告片
-     * @param callback
+     * @param callback 预告片
      */
     @Override
     public void prevue(MyCallback callback) {
-        HttpFactory.getFactory().wGet(Urls.PREVUE,callback);
+        HttpFactory.getFactory().wGet(Urls.PREVUE, callback);
     }
 
     /**
-     * 影评
      * @param needTop
-     * @param callback
+     * @param callback 影评
      */
     @Override
     public void film(String needTop, MyCallback callback) {
-        Map<String,String> map = new HashMap<>();
-        map.put("needTop",needTop);
-        HttpFactory.getFactory().Get(Urls.FILM,map,callback);
+        Map<String, String> map = new HashMap<>();
+        map.put("needTop", needTop);
+        HttpFactory.getFactory().Get(Urls.FILM, map, callback);
+    }
+
+    /**
+     * @param callback 首页 -- 选择城市
+     */
+    @Override
+    public void citylist(MyCallback callback) {
+        HttpFactory.getFactory().wGet(Urls.CITYLIST,callback);
     }
 }

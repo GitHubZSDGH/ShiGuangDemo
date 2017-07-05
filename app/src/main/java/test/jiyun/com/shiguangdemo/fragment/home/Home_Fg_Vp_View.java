@@ -1,11 +1,11 @@
 package test.jiyun.com.shiguangdemo.fragment.home;
 
-import android.os.Bundle;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,26 +14,21 @@ import com.androidkun.callback.PullToRefreshListener;
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
+import test.jiyun.com.shiguangdemo.App;
 import test.jiyun.com.shiguangdemo.R;
 import test.jiyun.com.shiguangdemo.adapter.home.Home_Fg_Vp_Adapter;
 import test.jiyun.com.shiguangdemo.adapter.home.Home_Fg_Vp_Ticket_Adapter;
 import test.jiyun.com.shiguangdemo.base.BaseFragment;
-import test.jiyun.com.shiguangdemo.fragment.ticket.Ticket_Fg_View;
 import test.jiyun.com.shiguangdemo.modle.bean.HomeListBean;
 import test.jiyun.com.shiguangdemo.modle.bean.HomeLiveMallBean;
 import test.jiyun.com.shiguangdemo.modle.bean.HomeTicketBean;
 import test.jiyun.com.shiguangdemo.modle.callback.MyCallback;
 import test.jiyun.com.shiguangdemo.modle.entivity.HomeModel;
 import test.jiyun.com.shiguangdemo.modle.entivity.IHomeModel;
-
-import static android.R.attr.x;
 
 /**
  * 项目名称:时光网
@@ -48,7 +43,7 @@ public class Home_Fg_Vp_View extends BaseFragment implements View.OnClickListene
     @Bind(R.id.Home_fg_Vp_RecyclerView)
     PullToRefreshRecyclerView HomeFgVpRecyclerView;
 
-    private TextView  tvTicketAll, tvLiveAll, tvLiveBoay, tvMallmore;//
+    private TextView tvTicketAll, tvLiveAll, tvLiveBoay, tvMallmore;//
     private ImageView ivLiveImage, ivMallImageDa, ivMallImageXiaoShang, ivmallImageXiaoXia;//
     private PullToRefreshRecyclerView ticketRecyclerView;//
 
@@ -61,7 +56,11 @@ public class Home_Fg_Vp_View extends BaseFragment implements View.OnClickListene
 
     private Home_Fg_Vp_Ticket_Adapter ticketAdapter;//
     private List<HomeTicketBean.MoviesBean> ticketList;//
-    private int page = 290;//
+
+    private SharedPreferences mshare = App.baseActivity.getSharedPreferences("city", Context.MODE_PRIVATE);
+    private int cityid;
+    private String cityname;
+    private int page ;//城市id；
 
 
     @Override
@@ -72,6 +71,10 @@ public class Home_Fg_Vp_View extends BaseFragment implements View.OnClickListene
     @Override
     protected void initView(View view) {
         // 精彩直播 和 正版商城 的布局初始化；
+        cityid = mshare.getInt("cityid",290);
+        page = cityid;
+//        Log.e("Home_Fg_Vp_View", "城市id----初始化:" + cityid);
+//        Log.e("Home_Fg_Vp_View", "城市id初始化:" + page);
 
         dataList = new ArrayList<>();
         homeModel = new HomeModel();
@@ -128,6 +131,12 @@ public class Home_Fg_Vp_View extends BaseFragment implements View.OnClickListene
                 HomeFgVpRecyclerView.postDelayed(new Runnable() {
                     @Override
                     public void run() {
+
+                        cityid = mshare.getInt("cityid", 290);
+                        page = cityid;
+//                        Log.e("Home_Fg_Vp_View", "城市id----刷新:" + cityid);
+
+                        initticket();
                         initloadData();
                         HomeFgVpRecyclerView.setRefreshComplete();
                     }
@@ -156,6 +165,7 @@ public class Home_Fg_Vp_View extends BaseFragment implements View.OnClickListene
         homeModel.other(pageIndex, new MyCallback() {
             @Override
             public void successful(String body) {
+//                Log.e("Home_Fg_Vp_View------", body);
                 Gson gson = new Gson();
                 HomeListBean homeListBean = gson.fromJson(body, HomeListBean.class);
                 dataList.addAll(homeListBean.getData().getData());
@@ -233,14 +243,16 @@ public class Home_Fg_Vp_View extends BaseFragment implements View.OnClickListene
         Glide.with(getContext()).load(url).into(view);
     }
 
-    private void initticket(){
+    private void initticket() {
+
         homeModel.ticket(page, new MyCallback() {
             @Override
             public void successful(String body) {
+                Log.e("Home_Fg_Vp_View", body);
                 Gson gson = new Gson();
                 HomeTicketBean homeTicketBean = gson.fromJson(body, HomeTicketBean.class);
                 ticketList.addAll(homeTicketBean.getMovies());
-                ticketAdapter = new Home_Fg_Vp_Ticket_Adapter(getContext(),ticketList);
+                ticketAdapter = new Home_Fg_Vp_Ticket_Adapter(getContext(), ticketList);
                 ticketRecyclerView.setAdapter(ticketAdapter);
                 ticketAdapter.notifyDataSetChanged();
             }

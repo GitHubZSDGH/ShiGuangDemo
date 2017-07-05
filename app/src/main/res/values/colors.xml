@@ -18,4 +18,18 @@
     <color name="red">#F13900</color>
     <color name="bottle_green">#70A41F</color>
 
+    //选择城市
+    <color name="base_actionbar_bg">#f5f5f5</color>
+    <color name="base_bg">#f4f6f6</color>
+    <color name="color_bottom_text_normal">#9da0a4</color>
+    <color name="transparent">#00000000</color>
+    <color name="guide_color">#898989</color>
+
+    //扫一扫
+    <color name="titleColor">#19ACCA</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#18ACCA</color>
+
+
 </resources>

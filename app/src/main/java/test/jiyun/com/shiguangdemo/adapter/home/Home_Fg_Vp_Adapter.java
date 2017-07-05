@@ -36,32 +36,20 @@ public class Home_Fg_Vp_Adapter extends BaseAdapter<HomeListBean.DataBeanX.DataB
 
     @Override
     public void convert(ViewHolder holder, HomeListBean.DataBeanX.DataBean dataBean) {
-//        if (dataBean.getDataType() == 0) {
+
         holder.setText(R.id.Home_fg_Vp_ListOne_title, dataBean.getTitle());
         holder.setText(R.id.Home_fg_Vp_ListOne_Body, dataBean.getContent());
         holder.setText(R.id.Home_fg_Vp_ListOne_Name, dataBean.getPublicName());
         holder.setText(R.id.Home_fg_Vp_ListOne_Comment, String.valueOf(dataBean.getCommentCount()));
 
         ImageView image = holder.getView(R.id.Home_fg_Vp_ListOne_xiaoImag);
-        Glide.with(context).load(dataBean.getPublicHeadImage()).into(image);
+        Glide.with(context).load(dataBean.getPublicHeadImage()).placeholder(R.drawable.horrorfilm_cover).into(image);
 
         ImageView imageView = holder.getView(R.id.Home_fg_Vp_ListOne_imag);
-        Glide.with(context).load(dataBean.getImg1()).into(imageView);
-//        }else {
-//
-//        }
+        Glide.with(context).load(dataBean.getImg1()).placeholder(R.drawable.horrorfilm_cover).into(imageView);
+
 
     }
 
-//    public int getitemLayout( List<HomeListBean.DataBeanX.DataBean> datas) {
-//
-//        HomeListBean.DataBeanX.DataBean da = new HomeListBean.DataBeanX.DataBean();
-//        int dataType = da.getDataType();
-//        if (dataType == 0){
-//            return R.layout.home_fg_vp_item_one;
-//        }else {
-//            return R.layout.home_fg_vp_item_two;
-//        }
-//
-//    }
+
 }

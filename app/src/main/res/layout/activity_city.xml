@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/city_title"
+        android:layout_width="match_parent"
+        android:background="#777778"
+        android:layout_height="40dp">
+        <ImageView
+            android:id="@+id/city_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/find_news_img_detail_top_left_arrow"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:text="城市列表" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/city_title"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="#33000000"
+        android:dividerHeight="0.1dp"
+        android:overScrollMode="never" />
+
+    <test.jiyun.com.shiguangdemo.view.QuickIndexBar
+        android:id="@+id/quickIndexBar"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/city_title"
+        android:background="#c3c4c4" />
+
+    <TextView
+        android:id="@+id/center_view"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/center_view"
+        android:gravity="center"
+        android:text="A"
+        android:textColor="#FFF"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

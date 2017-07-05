@@ -33,7 +33,10 @@ public class Home_Fg_Vp_Ticket_Adapter extends BaseAdapter<HomeTicketBean.Movies
         holder.setText(R.id.Home_fg_Vp_Item_name,moviesBean.getTitleCn());
 
         ImageView imageView = holder.getView(R.id.Home_fg_Vp_Item_Imag);
-        Glide.with(context).load(moviesBean.getImg()).into(imageView);
+        Glide.with(context).load(moviesBean.getImg())
+                .asBitmap()
+                .placeholder(R.drawable.horrorfilm_cover)
+                .into(imageView);
 
 
     }
