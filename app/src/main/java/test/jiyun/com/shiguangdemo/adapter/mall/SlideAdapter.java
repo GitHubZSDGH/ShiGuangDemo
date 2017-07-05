@@ -9,10 +9,8 @@ import com.androidkun.adapter.BaseAdapter;
 import com.androidkun.adapter.ViewHolder;
 import com.bumptech.glide.Glide;
 
-
 import java.util.List;
 
-import test.jiyun.com.shiguangdemo.App;
 import test.jiyun.com.shiguangdemo.R;
 import test.jiyun.com.shiguangdemo.modle.bean.mall.MarkerTopBean;
 
