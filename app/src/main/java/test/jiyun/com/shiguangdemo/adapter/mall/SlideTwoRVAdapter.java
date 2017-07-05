@@ -1,17 +1,17 @@
 package test.jiyun.com.shiguangdemo.adapter.mall;
 
 import android.content.Context;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.androidkun.adapter.BaseAdapter;
 import com.androidkun.adapter.ViewHolder;
 import com.bumptech.glide.Glide;
 
-
 import java.util.List;
 
-import test.jiyun.com.shiguangdemo.App;
 import test.jiyun.com.shiguangdemo.R;
+import test.jiyun.com.shiguangdemo.fragment.mall.WebViewutils;
 import test.jiyun.com.shiguangdemo.modle.bean.mall.MarkerTopBean;
 
 /**
@@ -25,10 +25,22 @@ public class SlideTwoRVAdapter extends BaseAdapter<MarkerTopBean.DataBean.Specia
     }
 
     @Override
-    public void convert(ViewHolder holder, MarkerTopBean.DataBean.SpecialTopicListBean.RelatedGoodsListBean relatedGoodsListBean) {
+    public void convert(ViewHolder holder, final MarkerTopBean.DataBean.SpecialTopicListBean.RelatedGoodsListBean relatedGoodsListBean) {
         holder.setText(R.id.top_list_rv_name,relatedGoodsListBean.getName());
         holder.setText(R.id.top_list_rv_price,relatedGoodsListBean.getPrice());
         ImageView imageView= (ImageView) holder.itemView.findViewById(R.id.top_list_rv_img);
         Glide.with(context).load(relatedGoodsListBean.getImg()).into(imageView);
+        String url = relatedGoodsListBean.getUrl();
+         holder.setOnclickListener(R.id.web_Linear, new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+
+            WebViewutils.mIntent(context,relatedGoodsListBean.getUrl());
+        }
+    })      ;
+
+
+
     }
 }
