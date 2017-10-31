@@ -7,7 +7,7 @@
         android:id="@+id/marker_top_list_img"
         android:layout_marginTop="@dimen/y10"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/y260"
+        android:layout_height="200dp"
         android:src="@drawable/img_default_300x200"
         android:scaleType="fitXY"
         />

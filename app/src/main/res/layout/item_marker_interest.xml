@@ -8,7 +8,7 @@
     <ImageView
         android:id="@+id/item_interest_img"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/y300"
+        android:layout_height="180dp"
         android:scaleType="fitXY" />
 
     <TextView

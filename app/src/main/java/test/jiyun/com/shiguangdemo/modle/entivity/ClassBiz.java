@@ -93,4 +93,29 @@ public class ClassBiz implements InterBiz {
         HttpFactory.getFactory().Get(Urls.REVIEWS,map,myCallBack);
     }
 
+    @Override
+    public void getPlayVideo(String clientId, int locationId, int liveId, MyCallback myCallBack) {
+        Map<String,String> map=new HashMap<>();
+        map.put("clientId", String.valueOf(clientId));
+        map.put("locationId", String.valueOf(locationId));
+        map.put("liveId", String.valueOf(liveId));
+        HttpFactory.getFactory().Get(Urls.PLAYVIDEO,map,myCallBack);
+    }
+
+    @Override
+    public void getTelecastComment(int commentId, int liveId, MyCallback myCallBack) {
+        Map<String,String> map=new HashMap<>();
+        map.put("commentId", String.valueOf(commentId));
+        map.put("liveId", String.valueOf(liveId));
+        HttpFactory.getFactory().Get(Urls.REVIEWSCOMMENT,map,myCallBack);
+    }
+
+    @Override
+    public void getTelecastNews(int pageIndex, int movieId, MyCallback myCallBack) {
+        Map<String,String> map=new HashMap<>();
+        map.put("pageIndex", String.valueOf(pageIndex));
+        map.put("movieId", String.valueOf(movieId));
+        HttpFactory.getFactory().Get(Urls.TELECASTNEW,map,myCallBack);
+    }
+
 }

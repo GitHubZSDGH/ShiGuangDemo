@@ -32,29 +32,32 @@ public class OrderRVAdapter extends RecyclerView.Adapter {
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(context).inflate(R.layout.item_telecast_order,null);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_telecast_order, null);
         return new OrderHolder(view);
     }
-    public interface OnListener{
+
+    public interface OnListener {
         void onItemClick(int position);
     }
+
     public OnListener listener;
 
-    public void setOnListener(OnListener listener){
-        this.listener=listener;
+    public void setOnListener(OnListener listener) {
+        this.listener = listener;
     }
+
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
-        OrderHolder orderHolder= (OrderHolder) holder;
-        OrderBean.DataBean.LivePreviewsBean bean=list.get(position);
+        OrderHolder orderHolder = (OrderHolder) holder;
+        OrderBean.DataBean.LivePreviewsBean bean = list.get(position);
         Glide.with(context).load(bean.getImage()).into(orderHolder.imageView);
         orderHolder.title.setText(bean.getTitle());
-        orderHolder.date.setText(bean.getStartTime()+"直播");
-        orderHolder.people.setText(bean.getStatistic()+"人预约");
+        orderHolder.date.setText(bean.getStartTime() + "直播");
+        orderHolder.people.setText(bean.getStatistic() + "人预约");
         orderHolder.order_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(null!=listener) {
+                if (null != listener) {
                     listener.onItemClick(position);
                 }
             }
@@ -65,17 +68,19 @@ public class OrderRVAdapter extends RecyclerView.Adapter {
     public int getItemCount() {
         return list.size();
     }
+
     class OrderHolder extends RecyclerView.ViewHolder {
-        private TextView title,date,people;
+        private TextView title, date, people;
         private ImageView imageView;
         private Button order_btn;
+
         public OrderHolder(View itemView) {
             super(itemView);
-            imageView= (ImageView) itemView.findViewById(R.id.item_order_img);
-            title= (TextView) itemView.findViewById(R.id.item_order_title);
-            date= (TextView) itemView.findViewById(R.id.item_order_date);
-            people= (TextView) itemView.findViewById(R.id.item_order_people);
-            order_btn= (Button) itemView.findViewById(R.id.item_order_btn);
+            imageView = (ImageView) itemView.findViewById(R.id.item_order_img);
+            title = (TextView) itemView.findViewById(R.id.item_order_title);
+            date = (TextView) itemView.findViewById(R.id.item_order_date);
+            people = (TextView) itemView.findViewById(R.id.item_order_people);
+            order_btn = (Button) itemView.findViewById(R.id.item_order_btn);
         }
     }
 }

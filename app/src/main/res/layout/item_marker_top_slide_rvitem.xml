@@ -7,8 +7,8 @@
     android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/top_list_rv_img"
-        android:layout_width="@dimen/x150"
-        android:layout_height="@dimen/y150"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
         android:scaleType="fitXY"
         android:src="@drawable/img_default_45x45"
         />
@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:text="变形金刚5帽"
         android:maxEms="5"
+        android:layout_marginLeft="10dp"
         android:lines="1"
         android:ellipsize="end"
         />
@@ -28,6 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="69"
+        android:layout_marginLeft="10dp"
         android:textColor="@color/orange"
         />
 

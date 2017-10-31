@@ -51,8 +51,7 @@ public class Info_Fg_View extends BaseFragment {
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         HomeFgVpRecyclerView.setLayoutManager(llm);
 
-        HomeFgVpRecyclerView.setPullRefreshEnabled(true);
-        HomeFgVpRecyclerView.displayLastRefreshTime(true);
+        HomeFgVpRecyclerView.setPullRefreshEnabled(false);
         HomeFgVpRecyclerView.setLoadingMoreEnabled(true);
         HomeFgVpRecyclerView.setPullToRefreshListener(new PullToRefreshListener() {
             @Override

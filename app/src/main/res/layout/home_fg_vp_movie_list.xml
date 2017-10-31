@@ -9,13 +9,13 @@
         android:layout_height="wrap_content"
         android:text="推荐影单"
         android:padding="10sp"/>
-    <com.androidkun.PullToRefreshRecyclerView
+    <test.jiyun.com.shiguangdemo.view.PtrRecycleView
         android:id="@+id/Home_fg_Vp_movie_RecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-    </com.androidkun.PullToRefreshRecyclerView>
+    </test.jiyun.com.shiguangdemo.view.PtrRecycleView>
 
 
 </LinearLayout>

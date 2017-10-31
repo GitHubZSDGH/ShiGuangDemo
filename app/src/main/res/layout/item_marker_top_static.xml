@@ -13,6 +13,7 @@
             android:padding="3dp"
             android:text="玩具模型"
             android:textSize="16sp"
+            android:layout_marginLeft="10dp"
             android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -26,6 +27,7 @@
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
             android:textSize="16sp"
             />
     </RelativeLayout>
@@ -33,7 +35,7 @@
     <ImageView
         android:id="@+id/marker_top_static_img1"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/y300"
+        android:layout_height="210dp"
         android:src="@drawable/img_default_300x200"
         android:scaleType="fitXY"
         />
@@ -43,14 +45,14 @@
         android:layout_height="@dimen/y2"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/y300"
+        android:layout_height="165dp"
         android:orientation="horizontal"
         android:weightSum="3"
         >
         <ImageView
             android:id="@+id/marker_top_static_img2"
             android:layout_width="0dp"
-            android:layout_height="@dimen/y300"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:src="@drawable/img_default_90x90"
             android:scaleType="fitXY"
@@ -58,7 +60,7 @@
         <ImageView
             android:id="@+id/marker_top_static_img3"
             android:layout_width="0dp"
-            android:layout_height="@dimen/y300"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:src="@drawable/img_default_90x90"
             android:scaleType="fitXY"
@@ -66,7 +68,7 @@
         <ImageView
             android:id="@+id/marker_top_static_img4"
             android:layout_width="0dp"
-            android:layout_height="@dimen/y300"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:src="@drawable/img_default_90x90"
             android:scaleType="fitXY"

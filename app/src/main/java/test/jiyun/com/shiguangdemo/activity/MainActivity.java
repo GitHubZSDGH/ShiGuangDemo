@@ -2,6 +2,8 @@ package test.jiyun.com.shiguangdemo.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.widget.EditText;

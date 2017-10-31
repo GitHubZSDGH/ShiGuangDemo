@@ -42,6 +42,9 @@ public class SoonTypeRgFragment extends BaseFragment {
 
         soon_rv.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL,true));
         soon_rv.setHasFixedSize(true);
+        soon_rv.setPullRefreshEnabled(false);
+        soon_rv.setLoadingMoreEnabled(false);
+        soon_rv.displayLastRefreshTime(false);
         soonHorizontalAdapter=new SoonHorizontalAdapter(getContext(),list);
         soon_rv.setAdapter(soonHorizontalAdapter);
     }

@@ -30,30 +30,32 @@ public class BackRvAdapter extends RecyclerView.Adapter {
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(context).inflate(R.layout.item_teletast_playback,null);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_teletast_playback, null);
 
         return new MyHolder(view);
     }
-public interface OnListener{
-   void onItemClick(int position);
-}
+
+    public interface OnListener {
+        void onItemClick(int position);
+    }
+
     public OnListener listener;
 
-    public void setOnListener(OnListener listener){
-        this.listener=listener;
+    public void setOnListener(OnListener listener) {
+        this.listener = listener;
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
-        MyHolder myHolder= (MyHolder) holder;
-        BackBean.DataBean bean=list.get(position);
+        MyHolder myHolder = (MyHolder) holder;
+        BackBean.DataBean bean = list.get(position);
         Glide.with(context).load(bean.getImage()).into(myHolder.imageView);
         myHolder.title.setText(bean.getTitle());
-        myHolder.count.setText(bean.getStatistic()+"人已观看");
+        myHolder.count.setText(bean.getStatistic() + "人已观看");
         myHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(null!=listener) {
+                if (null != listener) {
                     listener.onItemClick(position);
                 }
             }
@@ -67,12 +69,13 @@ public interface OnListener{
 
     class MyHolder extends RecyclerView.ViewHolder {
         private ImageView imageView;
-        private TextView title,count;
+        private TextView title, count;
+
         public MyHolder(View itemView) {
             super(itemView);
-            imageView= (ImageView) itemView.findViewById(R.id.item_teletast_playback_img);
-            title= (TextView) itemView.findViewById(R.id.item_teletast_playback_title);
-            count= (TextView) itemView.findViewById(R.id.item_teletast_playback_count);
+            imageView = (ImageView) itemView.findViewById(R.id.item_teletast_playback_img);
+            title = (TextView) itemView.findViewById(R.id.item_teletast_playback_title);
+            count = (TextView) itemView.findViewById(R.id.item_teletast_playback_count);
 
         }
     }

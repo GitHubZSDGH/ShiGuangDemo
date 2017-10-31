@@ -42,11 +42,5 @@ public class MovieAdapter extends BaseAdapter<MovielistBean.DataBean.ListBean> {
         }
 
 
-
-//        List<MarkerTopBean.DataBean.SpecialTopicListBean.RelatedGoodsListBean> relatedGoodsList =specialTopicListBean.getRelatedGoodsList();
-//        TwoRVAdapter adapter=new TwoRVAdapter(context,relatedGoodsList);
-//        pullRV.setAdapter(adapter);
-
-
     }
 }

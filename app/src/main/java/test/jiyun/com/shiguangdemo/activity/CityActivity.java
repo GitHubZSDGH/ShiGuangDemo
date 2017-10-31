@@ -88,17 +88,20 @@ public class CityActivity extends BaseActivity  {
         cityModel.citylist(new MyCallback() {
             @Override
             public void successful(String body) {
-//                Log.e("城市列表======>>>", body.toString());
+               //Log.e("城市列表======>>>", body.toString());
                 Gson gson = new Gson();
                 cityListBean = gson.fromJson(body, CityListBean.class);
 
                 mCity.addAll(cityListBean.getP());
-                initList();
+
                 Collections.sort(mCity);
+
                 adapter = new CityActivityAdapter(CityActivity.this, mCity);
                 lv.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
+                initList();
             }
+
 
             @Override
             public void failure(String errorMessage) {

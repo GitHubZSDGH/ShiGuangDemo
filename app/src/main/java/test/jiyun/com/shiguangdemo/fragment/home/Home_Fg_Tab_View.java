@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
+import test.jiyun.com.shiguangdemo.App;
 import test.jiyun.com.shiguangdemo.R;
 import test.jiyun.com.shiguangdemo.adapter.home.HomePagmentAdapter;
 import test.jiyun.com.shiguangdemo.base.BaseFragment;
@@ -27,6 +28,7 @@ import test.jiyun.com.shiguangdemo.fragment.home.info.Info_Fg_View;
 import test.jiyun.com.shiguangdemo.fragment.home.movie.Movie_Fg_Vp_View;
 import test.jiyun.com.shiguangdemo.fragment.home.prevue.Home_Fg_Vp_Prevue;
 import test.jiyun.com.shiguangdemo.view.MyScrollView;
+
 
 /**
  * 项目名称:时光网
@@ -155,7 +157,6 @@ public class Home_Fg_Tab_View extends BaseFragment implements MyScrollView.OnScr
     @Override
     protected void initListener() {
         HomeFgMyScrollView.setOnScrollListener(this);
-
         mHandler.sendEmptyMessageDelayed(1, 10);
     }
 
@@ -165,9 +166,11 @@ public class Home_Fg_Tab_View extends BaseFragment implements MyScrollView.OnScr
 //        Log.e("scroll::", "size::" + size + ", scrollY::" + scrollY);
         if (scrollY >= size) {
 
+            App.isVisible = false;
             HomeFgTabLayoutTwo.setVisibility(View.VISIBLE);
         } else {
 
+            App.isVisible = true;
 
             HomeFgTabLayoutTwo.setVisibility(View.INVISIBLE);
         }

@@ -26,12 +26,12 @@
 
     </RelativeLayout>
 
-    <com.androidkun.PullToRefreshRecyclerView
+    <test.jiyun.com.shiguangdemo.view.InnerPtrRecycleView
         android:id="@+id/Home_fg_Vp_ticket_RecyclerView"
         android:layout_width="match_parent"
         android:layout_height="200dp">
 
-    </com.androidkun.PullToRefreshRecyclerView>
+    </test.jiyun.com.shiguangdemo.view.InnerPtrRecycleView>
 
     <ImageView
         android:layout_width="match_parent"

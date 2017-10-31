@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<ImageView
+    android:id="@+id/comment_img"
+    android:layout_width="@dimen/x100"
+    android:layout_height="@dimen/y100"
+    android:src="@drawable/img_default_45x45"
+    />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/comment_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="南方姑娘"
+            android:maxEms="4"
+            android:ellipsize="end"
+            android:textColor="@color/gray"
+            />
+        <TextView
+            android:layout_marginLeft="@dimen/x100"
+            android:id="@+id/comment_showtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一天前"
+            android:maxEms="4"
+            android:ellipsize="end"
+            android:textColor="@color/gray"
+            />
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/comment_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:lines="2"
+            android:text="好看吗，有没有看过的，加我"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:ellipsize="end"
+            />
+    </LinearLayout>
+</LinearLayout>

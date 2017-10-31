@@ -24,6 +24,10 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         App.baseActivity = this;
+
+        if (!LibsChecker.checkVitamioLibs(this)) {
+            return;
+        }
         //获得view视图
         setContentView(getLayoutViwe());
         ButterKnife.bind(this);

@@ -47,6 +47,10 @@ public class Urls {
     public static final String COMINGSOON = BASEURlTICKET + "movie/mobilemoviecoming.api";
 
     public static final String BASEURl = "https://api-m.mtime.cn/";
+
+    // 精彩回放 -- 详情 -- 新闻
+    public static final String TELECASTNEW = BASEURl + "Movie/News.api";
+
     //正在热映
     public static final String SHOPPINGNOW = BASEURl + "PageSubArea/HotPlayMovies.api";
     //选择城市
@@ -66,6 +70,12 @@ public class Urls {
     //             1.  上半部分
     public static final String HALFPART = "https://mall-api-m.mtime.cn/mall/index.api";
 
+    //       3.精彩回放 -- 详情
+    public static final String REVIEWSDETAIL = "https://live-api-m.mtime.cn/live/detail";
+    //       4.精彩回放 --- 详情 -- 评论
+    public static final String REVIEWSCOMMENT = "https://live-api-m.mtime.cn/comment/list";
+
+
 
     //    直播
     //       1. 重磅预约
@@ -73,6 +83,8 @@ public class Urls {
     //       2.精彩回放
     public static final String REVIEWS = "https://live-api-m.mtime.cn/live_room/getWonderVodList";
 
+    //直播精彩回放 -- 详情视频
+    public static final String  PLAYVIDEO="https://live-api-m.mtime.cn/live/detail";
 
 
 

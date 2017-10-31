@@ -29,6 +29,8 @@ import test.jiyun.com.shiguangdemo.modle.bean.HomeTicketBean;
 import test.jiyun.com.shiguangdemo.modle.callback.MyCallback;
 import test.jiyun.com.shiguangdemo.modle.entivity.HomeModel;
 import test.jiyun.com.shiguangdemo.modle.entivity.IHomeModel;
+import test.jiyun.com.shiguangdemo.view.InnerPtrRecycleView;
+import test.jiyun.com.shiguangdemo.view.PtrRecycleView;
 
 /**
  * 项目名称:时光网
@@ -41,22 +43,24 @@ import test.jiyun.com.shiguangdemo.modle.entivity.IHomeModel;
 
 public class Home_Fg_Vp_View extends BaseFragment implements View.OnClickListener {
     @Bind(R.id.Home_fg_Vp_RecyclerView)
-    PullToRefreshRecyclerView HomeFgVpRecyclerView;
+    PtrRecycleView HomeFgVpRecyclerView;
 
-    private TextView tvTicketAll, tvLiveAll, tvLiveBoay, tvMallmore;//
+    //上半
+    private TextView tvTicketAll, tvLiveAll, tvLiveBoay, tvMallmore;
     private ImageView ivLiveImage, ivMallImageDa, ivMallImageXiaoShang, ivmallImageXiaoXia;//
-    private PullToRefreshRecyclerView ticketRecyclerView;//
+    private InnerPtrRecycleView ticketRecyclerView;//
 
-    private List<ImageView> imageList;//
+    private List<ImageView> imageList;// 图片集合
 
-    private Home_Fg_Vp_Adapter adapter;//
-    private List<HomeListBean.DataBeanX.DataBean> dataList;//
-    private IHomeModel homeModel;//
-    private int pageIndex = 1;//
+    private Home_Fg_Vp_Adapter adapter;// 适配器
+    private List<HomeListBean.DataBeanX.DataBean> dataList;
+    private IHomeModel homeModel;
+    private int pageIndex = 1;
 
     private Home_Fg_Vp_Ticket_Adapter ticketAdapter;//
     private List<HomeTicketBean.MoviesBean> ticketList;//
 
+    //同过SharedPreferences 将城市列表 的 城市id传过来
     private SharedPreferences mshare = App.baseActivity.getSharedPreferences("city", Context.MODE_PRIVATE);
     private int cityid;
     private String cityname;
@@ -85,7 +89,7 @@ public class Home_Fg_Vp_View extends BaseFragment implements View.OnClickListene
         // 正在售票
         tvTicketAll = (TextView) inflate.findViewById(R.id.Home_fg_Vp_ticket_all);
         tvTicketAll.setOnClickListener(this);
-        ticketRecyclerView = (PullToRefreshRecyclerView) inflate.findViewById(R.id.Home_fg_Vp_ticket_RecyclerView);
+        ticketRecyclerView = (InnerPtrRecycleView) inflate.findViewById(R.id.Home_fg_Vp_ticket_RecyclerView);
         LinearLayoutManager llma = new LinearLayoutManager(getActivity());
         llma.setOrientation(LinearLayoutManager.HORIZONTAL);
         ticketRecyclerView.setLayoutManager(llma);

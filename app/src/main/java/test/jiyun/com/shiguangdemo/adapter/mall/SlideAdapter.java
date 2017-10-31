@@ -30,6 +30,9 @@ public class SlideAdapter extends BaseAdapter<MarkerTopBean.DataBean.SpecialTopi
         Glide.with(context).load(specialTopicListBean.getSpecialTopicImg()).into(imageView);
 
         PullToRefreshRecyclerView pullRV=holder.getView(R.id.marker_top_list_pullrv);
+        pullRV.setLoadingMoreEnabled(false);
+        pullRV.setPullRefreshEnabled(false);
+        pullRV.displayLastRefreshTime(false);
         pullRV.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,true));
         List<MarkerTopBean.DataBean.SpecialTopicListBean.RelatedGoodsListBean> relatedGoodsList =specialTopicListBean.getRelatedGoodsList();
         SlideTwoRVAdapter adapter=new SlideTwoRVAdapter(context,relatedGoodsList);

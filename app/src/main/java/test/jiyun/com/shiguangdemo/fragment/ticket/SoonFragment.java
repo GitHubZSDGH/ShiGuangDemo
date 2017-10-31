@@ -82,7 +82,7 @@ public class SoonFragment extends BaseFragment {
         soon_recyclerview2= (RecyclerView) view.findViewById(R.id.soon_recyclerview2);
         soon_pollpv= (RollPagerView) view.findViewById(R.id.soon_pollpv);
 
-        soon_pollpv.setPlayDelay(1000); //设置播放时间间隔
+        soon_pollpv.setPlayDelay(4000); //设置播放时间间隔
         soon_pollpv.setAnimationDurtion(1500); //设置透明度
         soon_pollpv.setAdapter(new SoonRollAdapter());//设置适配器
         soon_pollpv.setHintView(new ColorPointHintView(getContext(), Color.RED, Color.WHITE));//设置圆点指示器颜色
@@ -95,6 +95,7 @@ public class SoonFragment extends BaseFragment {
 
         soon_recyclerview2.setLayoutManager(new LinearLayoutManager(getContext()));
         soon_recyclerview2.setHasFixedSize(true);
+
         soonRVAdapter=new SoonRVAdapter(getContext(),list);
         soon_recyclerview2.setAdapter(soonRVAdapter);
 

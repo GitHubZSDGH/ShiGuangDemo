@@ -12,4 +12,5 @@ import test.jiyun.com.shiguangdemo.base.BaseFragment;
 public class App extends Application{
     public static BaseActivity baseActivity;
     public static BaseFragment BaselastFragment;
+    public static boolean isVisible = true;
 }

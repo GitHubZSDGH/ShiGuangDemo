@@ -1,6 +1,7 @@
 package test.jiyun.com.shiguangdemo.modle.bean;
 
 import java.util.List;
+import java.util.concurrent.Callable;
 
 import test.jiyun.com.shiguangdemo.utils.PinYinUtils;
 
@@ -13,7 +14,7 @@ import test.jiyun.com.shiguangdemo.utils.PinYinUtils;
  * 修改内容:
  */
 
-public class CityListBean {
+public class CityListBean  {
 
 
     private List<PBean> p;
@@ -28,21 +29,22 @@ public class CityListBean {
 
     @Override
     public String toString() {
-        return "CityListBean{" +
-                "p=" + p +
-                '}';
+        return
+                "p=" + p ;
     }
+
+
 
     public static class PBean implements Comparable<CityListBean.PBean>{
         @Override
         public String toString() {
-            return "PBean{" +
+            return
                     "count=" + count +
                     ", id=" + id +
-                    ", n='" + n + '\'' +
-                    ", pinyinFull='" + pinyinFull + '\'' +
-                    ", pinyinShort='" + pinyinShort + '\'' +
-                    '}';
+                    ", n='" + n +
+                    ", pinyinFull='" + pinyinFull +
+                    ", pinyinShort='" + pinyinShort ;
+
         }
 
         /**
@@ -73,7 +75,7 @@ public class CityListBean {
             this.n = n;
             this.pinyinFull = pinyinFull;
             this.pinyinShort = pinyinShort;
-            setPinyinFull(PinYinUtils.getPinYin(n));
+            setPinyinFull(pinyinShort);
         }
 
         public int getCount() {
